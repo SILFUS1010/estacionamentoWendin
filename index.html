@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+
+    <link rel="apple-touch-icon" href="/icon-512x512.png">
+    <link rel="manifest" href="./json/manifest.json">
+    <link rel="canonical" href="./index.html">
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="./css/index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Ubuntu:wght@400;500&display=swap"
+        rel="stylesheet">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="igor IOS">
+    <link rel="apple-touch-icon" href="/icon-512x512.png">
+
+    <title>Document</title>
+
+    <div id="tituloSite">
+        <div id="estacionamentoWendin">
+            <a id="descricaoTitulo">ESTACIONAMENTO DO WENDIN</a>
+        </div>
+    </div>
+
+    <div id="menuOpcoes">
+        <div id="patio">
+            <p>
+                <a href="html/patio.html">Patio</a>
+            </p>
+        </div>
+
+        <div id="entrada">
+
+            <p>
+                <a>Entrada</a>
+            </p>
+        </div>
+
+        <div id="historico">
+            <a>Historico</a>
+        </div>
+    </div>
+
+    <div id="container">
+        <form id="formEntrada">
+            <label for="inputPlaca">Placa</label>
+            <input type="text" id="inputPlaca">
+            <label for="inputModelo">Modelo</label>
+            <input type="text" id="inputModelo">
+            <label for="inputCategoria">Categoria</label>
+            <input type="text" id="inputCategoria">
+            <label for="inputCor">Cor</label>
+            <input type="text" id="inputCor">
+            <label for="inputData">Data</label>
+            <input type="datetime-local" id="inputData">
+        </form>
+    </div>
+
+    <div id="btnRegistraEntrada">
+        <button id="btnEntrada" onclick="validaCampoVazio()">Registrar Entrada</button>
+    </div>
+
+
+</head>
+
+<body>
+
+
+    <script>
+        if ("serviceWorker" in navigator) {
+            if (navigator.serviceWorker.controller) {
+                console.log("[PWA Builder] active service worker found, no need to register");
+            } else {
+                // Register the service worker
+                navigator.serviceWorker
+                    .register("serviceworker.js", {
+                        scope: "./"
+                    })
+                    .then(function (reg) {
+                        console.log("[PWA Builder] Service worker has been registered for scope: " + reg.scope);
+                    });
+            }
+        }
+
+    </script>
+
+
+    <script type="text/javascript" src="./js/entrada.js"></script>
+
+
+</body>
+
+</html>
